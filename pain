@@ -95,7 +95,7 @@ elif [[ $pil == "1" || $pil == "01" ]]; then
 elif [[ $pil == "2" || $pil == "02" ]]; then
  	clear
  	echo -e $k"[INSTALL] $h Installing CISCO PACKETTRACER In Your System..."$n
- 	echo "Press [ENTER] to continue;" # belum
+ 	echo "Press [ENTER] to continue;" # belum 
 	read enter
 	Apain
 elif [[ $pil == "3" || $pil == "03" ]]; then
@@ -108,7 +108,9 @@ elif [[ $pil == "3" || $pil == "03" ]]; then
 elif [[ $pil == "4" || $pil == "04" ]]; then
 	clear
 	echo -e $k"[INSTALL] $h Installing SUBLIMETEXT In Your System..."$n
-	echo "Press [ENTER] to continue;" #belum
+	wget https://download.sublimetext.com/sublime-text_build-3126_i386.deb
+	sudo dpkg -i sublime-text_build-3126_i386.deb
+	echo "Press [ENTER] to continue;" 
 	read enter
 	Apain
 elif [[ $pil == "5" || $pil == "05" ]]; then
@@ -135,7 +137,9 @@ elif [[ $pil == "7" || $pil == "07" ]]; then
 elif [[ $pil == "8" || $pil == "08" ]]; then
 	clear
 	echo -e $k"[INSTALL] $h Installing WPS OFFICE In Your System.."$n
-	echo "Press [ENTER] to continue;" #belum
+	wget http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_i386.deb
+	sudo dpkg -i wps-office_10.1.0.5672~a21_i386.deb
+	echo "Press [ENTER] to continue;" 
 	read enter
 	Apain
 elif [[ $pil == "9" || $pil == "09" ]]; then
