@@ -2,7 +2,6 @@
 # Script Package installer for debian based
 # Available package for educational and studying
 # Present by : SMK WALISONGO PECANGAAN JEPARA
-
 clear
 echo "#! PAIN? Yeah,everyone have the pain but not everyone understand \"what is the pain?\" "
 echo "#! In here..."
@@ -91,7 +90,7 @@ elif [[ $pil == "1" || $pil == "01" ]]; then
 	echo -e $k"[INSTALL] $h Installing GNS3 In Your System... "$n
 	sudo add-apt-repository ppa:gns3/ppa
 	sudo apt-get update
-	sudo apt-get install gns3-gui
+	sudo apt-get install gns3 
 	echo "Press [ENTER] to continue ;"
 	read enter
 	Apain
@@ -204,6 +203,7 @@ elif [[ $pil == "16" ]]; then
 elif [[ $pil == "17" ]]; then
 	clear
 	echo -e $k"[INSTALL] $h Installing WINBOX In Your System.."$n
+	wget http://download2.mikrotik.com/routeros/winbox/3.7/winbox.exe
 	sudo wine winbox.exe
 	echo "Press [ENTER] to continue;"
 	read enter
