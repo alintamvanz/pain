@@ -204,7 +204,7 @@ elif [[ $pil == "17" ]]; then
 	clear
 	echo -e $k"[INSTALL] $h Installing WINBOX In Your System.."$n
 	wget http://download2.mikrotik.com/routeros/winbox/3.7/winbox.exe
-	sudo wine winbox.exe
+	wine winbox.exe
 	echo "Press [ENTER] to continue;"
 	read enter
 	Apain
