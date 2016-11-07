@@ -2,6 +2,7 @@
 # Script Package installer for debian based
 # Available package for educational and studying
 # Present by : SMK WALISONGO PECANGAAN JEPARA
+
 clear
 echo "#! PAIN? Yeah,everyone have the pain but not everyone understand \"what is the pain?\" "
 echo "#! In here..."
@@ -90,7 +91,7 @@ elif [[ $pil == "1" || $pil == "01" ]]; then
 	echo -e $k"[INSTALL] $h Installing GNS3 In Your System... "$n
 	sudo add-apt-repository ppa:gns3/ppa
 	sudo apt-get update
-	sudo apt-get install gns3 
+	sudo apt-get install gns3-gui
 	echo "Press [ENTER] to continue ;"
 	read enter
 	Apain
