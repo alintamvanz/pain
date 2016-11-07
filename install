@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# c0ded by : shutdown57 a.k.a alinko
+# linuxcode.org - alinkoproject.com
+# Script PAIN installer
+
+echo "#! PAIN? Yeah,everyone have the pain but not everyone understand \"what is the pain?\" "
+echo "#! In here..."
+echo "...I want to teach you about pain #!"
+echo "#! Aku tidak sendiri, karena kesendirian selalu bersamaku #!"
+echo "Press [ENTER] to continue for installation; "
+read enter
+
+	sudo chmod 777 pain
+	sudo cp pain /usr/bin/pain
+	echo "[DONE] INSTALLATION FINISHED."
+	echo "NOW YOU CAN USE \"PAIN\" WITH INPUT COMMAND LIKE : "
+	echo "root@pain~# pain "
