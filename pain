@@ -88,7 +88,9 @@ if [[ $pil == "0" || $pil == "00" ]]; then
 elif [[ $pil == "1" || $pil == "01" ]]; then
 	clear
 	echo -e $k"[INSTALL] $h Installing GNS3 In Your System... "$n
-	sudo apt-get install gns3 # belum
+	sudo add-apt-repository ppa:gns3/ppa
+	sudo apt-get update
+	sudo apt-get install gns3 
 	echo "Press [ENTER] to continue ;"
 	read enter
 	Apain
