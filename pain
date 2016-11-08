@@ -105,9 +105,11 @@ elif [[ $pil == "1" || $pil == "01" ]]; then
 elif [[ $pil == "2" || $pil == "02" ]]; then
  	clear
  	echo -e $k"[INSTALL] $h Installing CISCO PACKETTRACER In Your System..."$n
-	echo " This Installer Is Maintenance."
-	echo" Please, Wait and Trying next time"
- 	echo "Press [ENTER] to continue;" # belum 
+	wget http://download1512.mediafire.com/i2zxn0xrcc3g/s7ooz7oq7zkd07l/PacketTracer70_32bit_linux.tar.gz
+	tar -xvzf PacketTracer70_64bit_linux.tar.gz
+	cd PacketTracer70/
+	./install
+ 	echo "Press [ENTER] to continue;" 
 	read enter
 	Apain
 elif [[ $pil == "3" || $pil == "03" ]]; then
