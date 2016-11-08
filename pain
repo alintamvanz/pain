@@ -105,6 +105,8 @@ elif [[ $pil == "1" || $pil == "01" ]]; then
 elif [[ $pil == "2" || $pil == "02" ]]; then
  	clear
  	echo -e $k"[INSTALL] $h Installing CISCO PACKETTRACER In Your System..."$n
+	echo " This Installer Is Maintenance."
+	echo" Please, Wait and Trying next time"
  	echo "Press [ENTER] to continue;" # belum 
 	read enter
 	Apain
