@@ -1,7 +1,10 @@
 #!/bin/bash
+
 # Script Package installer for debian based
+# Debian - Ubuntu - Linux mint - Kali linux - Kubuntu - Lubuntu - Xubuntu - Cyborg  and etc.
+# Tested On Linux mint,Ubuntu,Kali linux
 # Available package for educational and studying
-# Present by : SMK WALISONGO PECANGAAN JEPARA
+
 clear
 echo "#! PAIN? Yeah,everyone have the pain but not everyone understand \"what is the pain?\" "
 echo "#! In here..."
@@ -10,15 +13,17 @@ echo "#! Aku tidak sendiri, karena kesendirian selalu bersamaku #!"
 echo "Press [ENTER] to continue; "
 read enter
 clear
-#warna
+#color setting
+u="\033[4m"
 m="\033[1;31m"
 k="\033[1;33m"
 h="\033[1;32m"
 b="\033[1;34m"
 n="\033[1;0m"
 function Arepo(){
+
 echo -e $m"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-echo -e $m"!!$k ____       _         ____  ____                       $m!!"         
+echo -e $m"!!$k  ____       _         ____  ____                      $m!!"         
 echo -e $m"!!$k |  _ \ __ _(_)_ __   / __ \|  _ \ ___ _ __   ___      $m!!"
 echo -e $m"!!$k | |_) / _' | | '_ \ / / _' | |_) / _ \ '_ \ / _ \     $m!!"
 echo -e $m"!!$k |  __/ (_| | | | | | | (_| |  _ <  __/ |_) | (_) |    $m!!"
@@ -29,28 +34,31 @@ echo -e $m"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"$n
 	echo -e $m"[$n 02 $m]$k REPOSITORY DEBIAN WHEEZY (KAMBING.UI.AC.ID)"
 	echo -e $m"[$n 03 $m]$k REPOSITORY DEBIAN JESSIE (KAMBING.UI.AC.ID)"
 	echo -e $m"[$n 99 $m]$k ADVANCED OPTIONS ADD REPOSITORY YOUR SELF "
-	echo -n -e $k"pain@Repo"$n" >"
+	echo -n -e $k $u"pain@Repo"$n" >"
 	read repo
 	if [[ $repo == "01" || $repo == "1" ]]; then
-		sudo echo deb http://kambing.ui.ac.id/ubuntu/ trusty main restricted universe multiverse >> /etc/apt/sources.list
-		sudo echo deb http://kambing.ui.ac.id/ubuntu/ trusty-updates main restricted universe multiverse >> /etc/apt/sources.list
-		sudo echo deb http://kambing.ui.ac.id/ubuntu/ trusty-security main restricted universe multiverse >> /etc/apt/sources.list
-		sudo echo deb http://kambing.ui.ac.id/ubuntu/ trusty-backports main restricted universe multiverse >> /etc/apt/sources.list
-		sudo echo deb http://kambing.ui.ac.id/ubuntu/ trusty-proposed main restricted universe multiverse >> /etc/apt/sources.list
+		echo deb http://kambing.ui.ac.id/ubuntu/ trusty main restricted universe multiverse >> /etc/apt/sources.list
+		echo deb http://kambing.ui.ac.id/ubuntu/ trusty-updates main restricted universe multiverse >> /etc/apt/sources.list
+		echo deb http://kambing.ui.ac.id/ubuntu/ trusty-security main restricted universe multiverse >> /etc/apt/sources.list
+		echo deb http://kambing.ui.ac.id/ubuntu/ trusty-backports main restricted universe multiverse >> /etc/apt/sources.list
+		echo deb http://kambing.ui.ac.id/ubuntu/ trusty-proposed main restricted universe multiverse >> /etc/apt/sources.list
 		sudo apt-get update
 	elif [[ $repo == "02" || $repo == "2" ]]; then
-		sudo echo deb http://kambing.ui.ac.id/debian/ wheezy main contrib non-free >> /etc/apt/sources.list
-		sudo echo deb http://kambing.ui.ac.id/debian/ wheezy-updates main contrib non-free >> /etc/apt/sources.list
-		sudo echo deb http://kambing.ui.ac.id/debian-security/ wheezy/updates main contrib non-free >> /etc/apt/sources.list
+		echo deb http://kambing.ui.ac.id/debian/ wheezy main contrib non-free >> /etc/apt/sources.list
+		echo deb http://kambing.ui.ac.id/debian/ wheezy-updates main contrib non-free >> /etc/apt/sources.list
+		echo deb http://kambing.ui.ac.id/debian-security/ wheezy/updates main contrib non-free >> /etc/apt/sources.list
 		sudo apt-get update
 	elif [[ $repo == "03" || $repo == "3" ]]; then
-		sudo echo deb http://kambing.ui.ac.id/debian/ jessie main contrib non-free >> /etc/apt/sources.list
-		sudo echo deb http://kambing.ui.ac.id/debian/ jessie-updates main contrib non-free >> /etc/apt/sources.list
-		sudo echo deb http://kambing.ui.ac.id/debian-security/ jessie/updates main contrib non-free >> /etc/apt/sources.list
+		echo deb http://kambing.ui.ac.id/debian/ jessie main contrib non-free >> /etc/apt/sources.list
+		echo deb http://kambing.ui.ac.id/debian/ jessie-updates main contrib non-free >> /etc/apt/sources.list
+        echo deb http://kambing.ui.ac.id/debian-security/ jessie/updates main contrib non-free >> /etc/apt/sources.list
 		sudo apt-get update
 	elif [[ $repo == "99" ]]; then
 		sudo nano /etc/apt/sources.list
 		sudo apt-get update
+	else
+		clear
+		Arepo
 	fi
 }
 function Apain(){
@@ -67,17 +75,17 @@ echo -e $b"        ~[ Package Installer for Debian Based ]~"
 echo -e $k"        ~[ Script by : alinko - linuxcode.org ]~"
 echo -e $m"        ~[         copyright (c) 2016         ]~"
 echo -e $n"        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-echo -e $h"[$n 00 $h]$b CHECK AVAILABLE REPOSITORY     $h[$n 09 $h] $b INSTALL VIRTUALBOX"
-echo -e $h"[$n 01 $h]$b INSTALL GNS3                   $h[$n 10 $h] $b INSTALL UGET DOWNLOADER"
-echo -e $h"[$n 02 $h]$b INSTALL CISCO PACKETTRACER     $h[$n 11 $h] $b INSTALL BANSHEE MEDIA PLAYER" 
-echo -e $h"[$n 03 $h]$b INSTALL EPOPTES                $h[$n 12 $h] $b INSTALL GIMP IMAGE MANIPULATION"
-echo -e $h"[$n 04 $h]$b INSTALL SUBLIMETEXT            $h[$n 13 $h] $b INSTALL CHEESE CAMERA"
-echo -e $h"[$n 05 $h]$b INSTALL FIREFOX BROWSER        $h[$n 14 $h] $b INSTALL KAZAM SCREENRECORDER"
-echo -e $h"[$n 06 $h]$b INSTALL CHROMIUM BROWSER       $h[$n 15 $h] $b INSTALL WINE"
-echo -e $h"[$n 07 $h]$b INSTALL LIBREOFFICE            $h[$n 16 $h] $b INSTALL INKSCAPE"
-echo -e $h"[$n 08 $h]$b INSTALL WPS OFFICE             $h[$n 17 $h] $b INSTALL WINBOX (MUST INSTALL WINE)"
-echo -e $h"[$n 57 $h]$b ADD REPOSITORY                 $h[$n 58 $h] $b INSTALL UPDATE"
-echo -n -e $k"@Pain"$n" >" $n
+echo -e $h"[$n 00 $h]$b CHECK AVAILABLE REPOSITORY     $h[$n 10 $h] $b INSTALL UGET DOWNLOADER"
+echo -e $h"[$n 01 $h]$b INSTALL GNS3                   $h[$n 11 $h] $b INSTALL BANSHEE MEDIA PLAYER"
+echo -e $h"[$n 02 $h]$b INSTALL CISCO PACKETTRACER     $h[$n 12 $h] $b INSTALL GIMP IMAGE MANIPULATION" 
+echo -e $h"[$n 03 $h]$b INSTALL EPOPTES                $h[$n 13 $h] $b INSTALL CHEESE CAMERA"
+echo -e $h"[$n 04 $h]$b INSTALL SUBLIMETEXT            $h[$n 14 $h] $b INSTALL KAZAM SCREENRECORDER"
+echo -e $h"[$n 05 $h]$b INSTALL FIREFOX BROWSER        $h[$n 15 $h] $b INSTALL WINE"
+echo -e $h"[$n 06 $h]$b INSTALL CHROMIUM BROWSER       $h[$n 16 $h] $b INSTALL INKSCAPE"
+echo -e $h"[$n 07 $h]$b INSTALL LIBREOFFICE            $h[$n 17 $h] $b INSTALL WINBOX (MUST INSTALL WINE)"
+echo -e $h"[$n 08 $h]$b INSTALL WPS OFFICE             $h[$n 57 $h] $b ADD REPOSITORY"
+echo -e $h"[$n 09 $h]$b INSTALL VIRTUALBOX             $h[$n 58 $h] $b UPDATE"
+echo -n -e $k $u"@PaIn"$n" >>" $n
 read pil
 
 if [[ $pil == "0" || $pil == "00" ]]; then
@@ -221,8 +229,19 @@ elif [[ $pil == "58" ]]; then
 	echo "Press [ENTER] to continue;"
 	read enter
 	Apain
+else
+	clear
+	Apain
 fi
 	
 
 }
-Apain
+w=`whoami`
+if [[ $w == "root" ]]; then
+	Apain
+else
+	echo -e "[$m FAILED $n] Failed to run this applications, you not root  "
+	echo -e "[$h + $n] For run this applications you must be root "
+	echo -e "[$h + $n] $u Try input command \"sudo su\" and run this!"
+	exit
+fi
