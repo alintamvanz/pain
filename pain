@@ -5,14 +5,6 @@
 # Tested On Linux mint,Ubuntu,Kali linux
 # Available package for educational and studying
 
-clear
-echo "#! PAIN? Yeah,everyone have the pain but not everyone understand \"what is the pain?\" "
-echo "#! In here..."
-echo "...I want to teach you about pain #!"
-echo "#! Aku tidak sendiri, karena kesendirian selalu bersamaku #!"
-echo "Press [ENTER] to continue; "
-read enter
-clear
 #color setting
 u="\033[4m"
 m="\033[1;31m"
@@ -20,6 +12,17 @@ k="\033[1;33m"
 h="\033[1;32m"
 b="\033[1;34m"
 n="\033[1;0m"
+clear
+echo "Checking internet Connection..."
+wget -q --tries=10 --timeout=20 --spider http://google.com
+if [[ $? -eq 0 ]]; then
+        echo -e "[$h OK $n]$u You Are Online"$n
+else
+        echo -e "[$m KO $n]$u You Are Offline Or Your Connection Too Slow."$n
+fi
+echo "Press [ENTER] to continue; "
+read enter
+clear
 function Arepo(){
 
 echo -e $m"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
@@ -105,11 +108,7 @@ elif [[ $pil == "1" || $pil == "01" ]]; then
 elif [[ $pil == "2" || $pil == "02" ]]; then
  	clear
  	echo -e $k"[INSTALL] $h Installing CISCO PACKETTRACER In Your System..."$n
-	wget http://download1512.mediafire.com/i2zxn0xrcc3g/s7ooz7oq7zkd07l/PacketTracer70_32bit_linux.tar.gz
-	tar -xvzf PacketTracer70_64bit_linux.tar.gz
-	cd PacketTracer70/
-	./install
- 	echo "Press [ENTER] to continue;" 
+ 	echo "Press [ENTER] to continue;" # belum 
 	read enter
 	Apain
 elif [[ $pil == "3" || $pil == "03" ]]; then
