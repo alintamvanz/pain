@@ -79,7 +79,7 @@ if [[ $enter == "1" ]]; then
     echo Categories=GNOME\;GTK\;Network\;WebBrowser\; >> /usr/share/applications/pain.desktop
     echo Name=PaIn >> /usr/share/applications/pain.desktop
     echo Comment=Package Installer For Linux Debian based >> /usr/share/applications/pain.desktop
-    echo Exec=xterm -geometry 200x200 -title \"Package Installer\" -e sh -c \'sudo pain\;exec bash\' >> /usr/share/applications/pain.desktop
+    echo Exec=gksu "xterm -geometry 200x200 -title 'Package Installer' -e sh -c 'sudo pain;exec bash'" >> /usr/share/applications/pain.desktop
     echo Icon=/opt/pain/pain.png >> /usr/share/applications/pain.desktop
 
     sleep 1
