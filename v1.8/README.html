@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>./PaIn ~ Package Installer</title>
+<link rel="icon" type="text/css" href="pain.png">
+<meta charset="utf-8">
+<meta name="author" content="alinko">
+<!--
+"PaIn README.html"
+coded by : alinko a.k.a shutdown57
+alinkokomansuby@gmail.com
+linuxcode.org - alinkoproject.com
+-->
+<style type="text/css">
+	body{background:#fff;color:#333;font-family:monospace;}h1{text-align: center;box-shadow:3px 5px 6px #000;margin-top:69px;}pre{box-shadow:1px 2px 3px #333 inset;margin-top:69px;}#banner{box-shadow:0px 0px 0px;}ul{list-style: none;width:800px;color:#000;margin: 0 auto;padding:8px;border:1px dashed #000;}li{display: inline-block;text-align: center;margin:0 auto;}li a{color:#000;text-decoration: none;font-size:13px;}li a:hover{color:#000;padding:8px;border:1px solid #000;transition-duration:1s;-o-transition-duration:1s;-moz-transition-duration:1s;-webkit-transition-duration:1s;box-shadow:1px 2px 3px #000 inset;}
+</style>
+</head>
+<body>
+
+   <script type="text/javascript">
+   	function ngelink(link){
+   		window.open(link);
+   	}
+   	function install(a,b){
+   		document.getElementById(a).style.display='none';
+   		document.getElementById(b).style.display='block';
+   	}
+   </script>
+ <ul>
+ <center>
+ 	<li><a href="javascript:void(0);" onclick="install('install','pain');">Home</a></li>
+ 	<li><a href="javascript:void(0);" onclick="install('pain','install');">Installation</a></li>
+ 	<li><a href="javascript:void(0);" onclick="ngelink('LICENSE.txt');">License</a></li>
+ 	<li><a href="javascript:void(0);" onclick="ngelink('app/pain')">Pain Script</a></li>
+ 	<li><a href="javascript:void(0);" onclick="ngelink('changeLog.txt');">Change Log</a></li>
+  <li><a href="javascript:void(0);" onclick="alert('version : 1.8 \n codename : sadness \n copyright (c) 2016 alinko');">About</a></li>
+ 	</center>
+ </ul>
+ <div id="pain">
+ <center>
+ <pre>
+##################################################
+ Author  : alinko A.K.A shutdown57      
+ Site    : linuxcode.org - alinkoproject.com
+ Email   : alinkokomansuby@gmail.com
+ Github  : https://github.com/alintamvanz
+ Twitter : https://twitter.com/alinmansby
+##################################################
+ Title   : Pain (Package Installer)
+ Support : Linux Debian Based.
+ Version : 1.8
+ Codename: sadness
+ Releases: ~
+ Language: Bash (shell)
+##################################################
+ </pre>
+<pre id="banner">
+      __             _                                _   ___  
+     / /__  __ _  __| |_ __   ___  ___ ___     __   _/ | ( _ ) 
+    / / __|/ _` |/ _` | '_ \ / _ \/ __/ __|____\ \ / / | / _ \ 
+ _ / /\__ \ (_| | (_| | | | |  __/\__ \__ \_____\ V /| || (_) |
+(_)_/ |___/\__,_|\__,_|_| |_|\___||___/___/      \_/ |_(_)___/ 
+                                                               
+
+<font color=green>
+ /\/|_   ____       ___         __ /\/| 
+|/\/ _| |  _ \ __ _|_ _|_ __   |_ |/\/  
+   | |  | |_) / _' || || '_ \   | |     
+   | |  |  __/ (_| || || | | |  | |     
+   | |  |_|   \__,_|___|_| |_|  | |     
+   |__| <font color=red>codename</font><font color=blue> sadness </font><font color=red> v</font><font color=blue>1.8</font> |__| 
+</font>
++---=@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+
+ +--=[ Package Installer for Debian Based ]-+
+  +-=[ Script by : alinko - linuxcode.org ]=-+
+   +-[         copyright (c) 2016         ]=--+
+    +@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=---+
+   </pre>
+   </div>
+   <div id="install" style="display: none;">
+    <img src="app/pain.png" style="width:200px;height:200px;">
+
+<h1>~! INSTALLATION !~</h1>
+<pre>
+root@Debian:~# git clone https://github.com/alintamvanz/pain.git
+root@Debian:~# cd pain
+root@Debian:~# chmod +x install
+root@Debian:~#./install
+</pre>
+<h1>~! INSTALLATION 2 !~</h1>
+<pre>
+root@Debian:~# git clone https://github.com/alintamvanz/pain.git && cd pain && chmod +x install && ./install
+</pre>
+</div>
+</body>
+</html>
