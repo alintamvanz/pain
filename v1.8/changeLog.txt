@@ -1,0 +1,50 @@
+##################################################
+# Author  : alinko A.K.A shutdown57      
+# Site    : linuxcode.org - alinkoproject.com
+# Email   : alinkokomansuby@gmail.com
+# Github  : https://github.com/alintamvanz
+# Twitter : https://twitter.com/alinmansby
+##################################################
+# Title   : Pain (Package Installer)
+# Support : Linux Debian Based.
+# Version : 1.8
+# Codename: sadness
+# Releases: ~
+# Language: Bash (shell)
+##################################################
+
+20 November 2016
+Releases Version 1.8 (sadness)
+=> Changed
+-> Add More beauty banner :v
+-> Add xterm Installer
+-> Testing Xterm installed
+-> auto open README.html when installation finished
+-> Modify Installation files
+-> Add Category Package
+-> Much More Package
+-> Display And Color Changed
+-> Desktop Shortcut
+=> Files
+-> move pain.png to app/pain.png
+-> rename change.log to changeLog.txt
+-> Create file autorun.sh
+-> move pain to app/pain
+-> Add directory app
+-> pain.png
+-> README.html
+-> LICENSE
+-> change.log
+-> pain
+-> install
+4 November 2016
+Releases Version 1 (beta)
+=> Changed
+-> Basic Installer
+-> Little Package 
+-> Recommended Package Only
+=> Files
+-> pain
+-> install
+-> README.md
+-> pain.png

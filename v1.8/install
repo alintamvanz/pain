@@ -1,0 +1,135 @@
+#!/bin/bash
+
+# c0ded by : shutdown57 a.k.a alinko
+# linuxcode.org - alinkoproject.com
+# Script PAIN installer
+who=`whoami`
+m="\e[1;31m"
+h="\e[1;32m"
+k="\e[1;33m"
+b="\e[1;34m"
+n="\e[0m"
+PainOpen(){
+	clear
+echo -e $m"      __             _                        $b         _   ___   "
+echo -e $m"     / /__  __ _  __| |_ __   ___  ___ ___    $b  __   _/ | ( _ )  "
+echo -e $m"    / / __|/ _' |/ _' | '_ \ / _ \/ __/ __|   $b  \ \ / / | / _ \  "
+echo -e $m" _ / /\__ \ (_| | (_| | | | |  __/\__ \__ \   $b   \ V /| || (_) | "
+echo -e $m"(_)_/ |___/\__,_|\__,_|_| |_|\___||___/___/   $b    \_/ |_(_)___/  "
+echo -e $m"                                              $b                   "
+echo -e $m" PaIn v"$h"1.8 "$m"codename "$h"sadness $n | $k linuxcode.org "$n
+echo -e "Press $k [ENTER]$n To continue;"
+read enter
+PainInstall
+}
+PainInstall(){
+
+clear
+echo -e $k"  #   #####$h    ######         ###           $k#####   #   "$n
+echo -e $k" # #  #    $h    #     #   ##    #  #    #    $k    #  # #  "$n 
+echo -e $k"#   # #    $h    #     #  #  #   #  ##   #    $k    # #   # "$n 
+echo -e $k"      #    $h    ######  #    #  #  # #  #    $k    #       "$n 
+echo -e $k"      #    $h    #       ######  #  #  # #    $k    #       "$n 
+echo -e $k"      #    $h    #       #    #  #  #   ##    $k    #       "$n 
+echo -e $k"      #####$h    #       #    # ### #    #    $k#####       "$n 
+
+echo "#! PAIN? Yeah,everyone have the pain but not everyone understand \"what is the pain?\" "
+echo "#! In here..."
+echo "...I want to teach you about pain #!"
+echo "#! Aku tidak sendiri, karena kesendirian selalu bersamaku #!"
+
+echo -e $h"[$n"1"$h] $k Install PaIn"$n
+echo -e $h"[$n"2"$h] $k Uninstall PaIn"$n
+echo -e $h"[$n"3"$h] $k Install Xterm"$n
+
+echo -e -n $b"install@pain$n >>"
+read enter
+if [[ $enter == "1" ]]; then
+	echo "Press [ENTER] to read GNU General Public License (GPL)."
+	read license
+	echo -e "$h"
+	more LICENSE.txt
+	echo -e "$n"
+	echo -n "What You Agree About that License? [Y/N] : "
+	read ligedi
+	if [[ $ligedi == "y" || $ligedi == "Y" ]]; then
+	
+    if ! bash -c 'xterm -e sh -c "exit;exec bash"' >/dev/null; then
+       echo "XTERM not intstalled in your system,Please Install xterm first."
+    exit 1
+    fi
+	echo -e $h"[+]$n Installing PaIn ..."
+	sleep 3
+	echo -e $h"[+]$n Creating Directory at /opt/pain ..."
+    mkdir /opt/pain
+    sleep 1
+    echo -e $h"[+]$n Creating Desktop Icon ..."
+    cp app/pain.png /opt/pain/pain.png
+    cp README.html /opt/pain/README.html
+    cp LICENSE.txt /opt/pain/LICENSE.txt
+    cp changeLog.txt /opt/pain/changeLog.txt
+    echo alinkokomansuby@gmail.com >> /opt/pain/contact.txt
+    echo http://alinkoproject.com >> /opt/pain/contact.txt
+    echo http://linuxcode.org >> /opt/pain/contact.txt
+    sleep 1
+    echo -e $h"[+]$n Creating Desktop Application ..."
+    echo [Desktop Entry] >> /usr/share/applications/pain.desktop
+    echo Terminal=false >> /usr/share/applications/pain.desktop
+    echo Type=Application >> /usr/share/applications/pain.desktop
+    echo Categories=GNOME\;GTK\;Network\;WebBrowser\; >> /usr/share/applications/pain.desktop
+    echo Name=PaIn >> /usr/share/applications/pain.desktop
+    echo Comment=Package Installer For Linux Debian based >> /usr/share/applications/pain.desktop
+    echo Exec=xterm -geometry 200x200 -title \"Package Installer\" -e sh -c \'sudo pain\;exec bash\' >> /usr/share/applications/pain.desktop
+    echo Icon=/opt/pain/pain.png >> /usr/share/applications/pain.desktop
+
+    sleep 1
+    echo -e $h"[+]$n Waiting for you ..."
+	chmod 777 -R app/
+    chmod 777 *
+	cp app/autorun.sh /usr/bin/pain 
+    cp app/pain       /opt/pain/pain
+	sleep 1
+	echo -e $h"[+]$b INSTALLATION FINISHED."$n
+	browse README.html
+	clear
+	echo -e $h"[+]$b INSTALLATION FINISHED."$n
+else
+	echo "[-] You was disagree that license."
+	echo "[-] Exiting..."
+	sleep 1
+	exit 1
+fi
+elif [[ $enter == "2" ]]; then
+	echo -e $b"ARE YOU SURE ? $n press [ENTER] To Continue;"
+	read un
+	echo -e $h"[-]$n Uninstalling PaIn ..."
+	rm /usr/bin/pain
+	sleep 3
+	echo -e $h"[-]$n Removing Configuration files ..."
+	rm /opt/pain/*
+	sleep 1
+	echo -e $h"[-]$n Removing Desktop Icon ..."
+	rm /usr/share/applications/pain.desktop
+    sleep 1
+	echo -e $h"[-]$n Removing Directory at /opt/pain ..."
+	rmdir /opt/pain
+    sleep 1
+	echo -e $h"[+]$n Waiting for you..."
+	sleep 4
+	echo -e $h"[+]$n Uninstall Finished~"
+elif [[ $enter == "3" ]]; then
+	echo -e $b"INSTALLING XTERM IN YOUR SYSTEM."$n
+	apt-get install xterm -y
+	echo "Press [ENTER] to continue;"
+	read hehe
+	PainInstall
+else
+		PainInstall
+fi
+
+}
+if [[ $who == "root" ]]; then
+PainOpen
+else
+	echo "You Must Be root! "
+fi
