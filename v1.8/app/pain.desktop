@@ -1,0 +1,10 @@
+[Desktop Entry]
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Network;WebBrowser;
+Name=PaIn
+Comment=Package Installer For Linux Debian based
+Exec=gksu "xterm -geometry 200x200 -title 'Package Installer' -e sh -c 'sudo pain;exec bash'"
+Icon=/opt/pain/pain.png
+
+
